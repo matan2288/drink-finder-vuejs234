@@ -85,7 +85,7 @@ export default createStore({
         payload.SelectedFilter !== "" &&
         payload.SelectedCategory == "Ingredient"
       ) {
-        state.drinks.drinks = state.drinks.drinks.filter(function (ingredient) {
+        state.drinks.drinks = state.drinks.drinks.filter((ingredient)=> {
           return (
             ingredient.strIngredient1 == payload.SelectedFilter ||
             ingredient.strIngredient2 == payload.SelectedFilter ||
