@@ -1,18 +1,50 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home-main-container">
+    <div class="search-bar-container">
+      <SearchBarContaniner />
+    </div>
+    <div class="filter-sort-container">
+      <FilterBar />
+      <DrinkSorting />
+    </div>
+
+    <div class="terminal-container">
+      <TerminalMainComponent />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import SearchBarContaniner from "../components/HomeViewComponents/HomeViewPeripheralComponents/SearchBarContaniner.vue";
+import FilterBar from "../components/HomeViewComponents/HomeViewPeripheralComponents/FilterBar.vue";
+import DrinkSorting from "../components/HomeViewComponents/HomeViewPeripheralComponents/DrinkSorting.vue";
+import TerminalMainComponent from "../components/HomeViewComponents/TerminalComponents/TerminalMainComponent.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
-  }
-}
+    SearchBarContaniner,
+    FilterBar,
+    DrinkSorting,
+    TerminalMainComponent,
+  },
+};
 </script>
+
+<style scoped>
+
+.filter-sort-container {
+  margin: auto;
+  padding: 15px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.terminal-container {
+
+  margin-bottom: 50px;
+}
+</style>

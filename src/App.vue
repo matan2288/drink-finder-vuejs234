@@ -1,9 +1,12 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <img src="https://i.ibb.co/x80mNbj/WineLogo.png" style="width: 70px; margin:auto;" alt="">
+    <div class="links" style=" margin:15px;" >
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
@@ -13,17 +16,21 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  max-width: 80%;
+  margin: auto;
 }
 
 nav {
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 
   a {
     font-weight: bold;
     color: #2c3e50;
-
+    text-decoration: none;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #7e0303;
     }
   }
 }
