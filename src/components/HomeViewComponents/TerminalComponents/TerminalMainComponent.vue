@@ -62,8 +62,6 @@ export default {
 
 @media (max-width: 400px) {
   .terminal-main-container {
-    border: solid brown 1px;
-
     display: flex;
     flex-wrap: wrap;
     overflow: scroll;
